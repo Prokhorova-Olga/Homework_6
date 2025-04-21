@@ -50,11 +50,11 @@ public class Main {
         }
 
         System.out.println("Task 9");
-        savings = 29000;
         total = 0;
-        for ( int i = 1; i <= 12; i++)  {
-            total = total + total / 100;
-            total = total + savings;
+        double percent = 1D / 100;
+        for ( int i = 0; i < 12; i++) {
+            total += savings;
+            total = (int) (total * (1 + percent));
             System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
         }
 
@@ -64,23 +64,5 @@ public class Main {
             int result = multiplier * i;
             System.out.println(multiplier + " * " + i + " = " + result);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
